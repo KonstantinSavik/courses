@@ -1,0 +1,43 @@
+.loader {
+  position: relative;
+
+  &.centered {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-30px);
+  }
+
+  &::before {
+    position: absolute;
+    border: solid 2px;
+    border-radius: 50%;
+    border-color: #00B4E3 #EEEEEE #EEEEEE #00B4E3;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    animation-name: spin;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.56, 0.2, 0.43, 0.84);
+    animation-iteration-count: infinite;
+    content: ' ';
+  }
+
+  .loader-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
